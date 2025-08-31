@@ -1,0 +1,121 @@
+# -------------------------------
+# Python Virtual Environments
+# -------------------------------
+rag-env/
+venv/
+env/
+ENV/
+.venv/
+
+# -------------------------------
+# Python Cache Files
+# -------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------------------------------
+# Jupyter Notebooks
+# -------------------------------
+.ipynb_checkpoints/
+
+# -------------------------------
+# IDE Settings
+# -------------------------------
+.vscode/
+.idea/
+
+# -------------------------------
+# OS Junk Files
+# -------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# Logs & Temp Files
+# -------------------------------
+*.log
+*.tmp
+*.swp
+
+# -------------------------------
+# Compiled Files
+# -------------------------------
+*.so
+*.dll
+*.pyd
+
+# -------------------------------
+# Test & Coverage Outputs
+# -------------------------------
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# -------------------------------
+# Environment Variables
+# -------------------------------
+.env
+.env.*
+
+# -------------------------------
+# Pip Dependency Files
+# -------------------------------
+pip-log.txt
+pip-delete-this-directory.txt
+
+# -------------------------------
+# MyPy / PyInstaller
+# -------------------------------
+.mypy_cache/
+.dmypy.json
+dist/
+build/
+*.spec
+
+# -------------------------------
+# Coverage Reports
+# -------------------------------
+coverage.xml
+*.cover
+
+# -------------------------------
+# Other
+# -------------------------------
+*.bak
+*.orig
+
+# -------------------------------
+# AI / RAG Specific
+# -------------------------------
+# Hugging Face / Transformers cache
+.cache/huggingface/
+transformers_cache/
+*.bin
+*.safetensors
+
+# Vector Databases (Chroma, FAISS, Weaviate, etc.)
+chroma/
+*.faiss
+*.hnsw
+*.sqlite
+
+# Datasets (ignore large local data, track only schema/sample if needed)
+data/
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+
+# Checkpoints / Training outputs
+checkpoints/
+outputs/
+runs/
+wandb/
+
+# -------------------------------
+# End of File
+# -------------------------------
