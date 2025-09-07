@@ -24,7 +24,7 @@ def generate_response(engine, temperature, max_tokens):
 
 
 if __name__ == "__main__":
-    model= generate_response(engine="Gemma2-9b-It", temperature=0.7, max_tokens=1000)
+    model= generate_response(engine= "llama-3.1-8b-instant", temperature=0.7, max_tokens=1000)
     response = model.invoke({"input": "What is the treatment for hypertension?"})
     print(response.content)
     
