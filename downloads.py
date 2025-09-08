@@ -22,44 +22,7 @@ class Settings(BaseSettings):
     }
     uci_links: Dict[str, str] = {
     "heart_disease": "https://archive.ics.uci.edu/dataset/45/heart+disease",
-    "diabetes": "https://archive.ics.uci.edu/ml/datasets/Diabetes+130-US+Hospitals+for+Years+1999-2008",
-    "liver_disease": "https://archive.ics.uci.edu/ml/machine-learning-databases/00225/indian_liver_patient.csv",
-    "kidney_disease": "https://archive.ics.uci.edu/ml/machine-learning-databases/00383/kidney_disease.csv",
-    "breast_cancer": "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wpbc.data",
-    "parkinsons": "https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data",
-    "thyroid_disease": "https://archive.ics.uci.edu/ml/machine-learning-databases/thyroid-disease/ann-train.data",
-    "hepatitis": "https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.data",
-    "tuberculosis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00462/tuberculosis.csv",
-    "covid19": "https://archive.ics.uci.edu/ml/machine-learning-databases/00529/COVID-19%20Dataset.zip",
-    "pneumonia": "https://archive.ics.uci.edu/ml/machine-learning-databases/00454/pneumonia.csv",
-    "malaria": "https://archive.ics.uci.edu/ml/machine-learning-databases/00465/malaria.csv",
-    "heart_failure": "https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv",
-    "stroke": "https://archive.ics.uci.edu/ml/machine-learning-databases/00514/healthcare-dataset-stroke-data.csv",
-    "sepsis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00496/sepsis_data.csv",
-    "chronic_kidney_disease": "https://archive.ics.uci.edu/ml/datasets/Chronic+Kidney+Disease",
-    "lupus": "https://archive.ics.uci.edu/ml/machine-learning-databases/00451/lupus.csv",
-    "alzheimers": "https://archive.ics.uci.edu/ml/machine-learning-databases/00462/alzheimer.csv",
-    "asthma": "https://archive.ics.uci.edu/ml/machine-learning-databases/00472/asthma.csv",
-    "autism": "https://archive.ics.uci.edu/ml/machine-learning-databases/00433/autism.csv",
-    "epilepsy": "https://archive.ics.uci.edu/ml/machine-learning-databases/00423/epilepsy.csv",
-    "fibromyalgia": "https://archive.ics.uci.edu/ml/machine-learning-databases/00455/fibromyalgia.csv",
-    "gastroenteritis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00463/gastroenteritis.csv",
-    "hearing_loss": "https://archive.ics.uci.edu/ml/machine-learning-databases/00473/hearing_loss.csv",
-    "migraine": "https://archive.ics.uci.edu/ml/machine-learning-databases/00474/migraine.csv",
-    "osteoporosis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00475/osteoporosis.csv",
-    "psoriasis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00476/psoriasis.csv",
-    "rheumatoid_arthritis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00477/rheumatoid_arthritis.csv",
-    "sickle_cell_disease": "https://archive.ics.uci.edu/ml/machine-learning-databases/00478/sickle_cell_disease.csv",
-    "systemic_lupus_erythematosus": "https://archive.ics.uci.edu/ml/machine-learning-databases/00479/systemic_lupus_erythematosus.csv",
-    "ulcerative_colitis": "https://archive.ics.uci.edu/ml/machine-learning-databases/00480/ulcerative_colitis.csv",
-    "vitiligo": "https://archive.ics.uci.edu/ml/machine-learning-databases/00481/vitiligo.csv",
-    "uci_symptoms_1": "https://archive.ics.uci.edu/ml/machine-learning-databases/00482/symptoms.csv",
-    "uci_symptoms_2": "https://archive.ics.uci.edu/ml/machine-learning-databases/00359/symptoms.csv",
-    "uci_diseases_1": "https://archive.ics.uci.edu/ml/machine-learning-databases/00359/diseases.csv",
-    "uci_diseases_2": "https://archive.ics.uci.edu/ml/machine-learning-databases/00482/diseases.csv",
-    "uci_treatments_1": "https://archive.ics.uci.edu/ml/machine-learning-databases/00359/treatments.csv",
-    "uci_treatments_2": "https://archive.ics.uci.edu/ml/machine-learning-databases/00482/treatments.csv",
-}
+    }
 
     class Config:
         env_file = ".env"
@@ -111,7 +74,7 @@ def download_kaggle(slug: str, dest_dir: Path = settings.raw_dir) -> List[Path]:
 def download_uci(name: str, url: str, dest_dir: Path = settings.raw_dir) -> Path:
     """Download a file from a UCI URL."""
     dest_dir.mkdir(parents=True, exist_ok=True)
-    local = dest_dir / f"{name}.csv"
+    local = dest_dir / "chronic" / f"{name}.csv"
     if local.exists():
         return local
     print(f"Downloading UCI file {name} from {url}")
