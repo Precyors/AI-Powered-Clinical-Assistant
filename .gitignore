@@ -103,12 +103,6 @@ chroma/
 *.hnsw
 *.sqlite
 
-# Datasets (ignore large local data, track only schema/sample if needed)
-data/
-*.csv
-*.tsv
-*.jsonl
-*.parquet
 
 # Checkpoints / Training outputs
 checkpoints/
