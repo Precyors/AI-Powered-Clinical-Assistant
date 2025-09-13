@@ -1,4 +1,4 @@
-from src.prompt_v2 import GPTOSSClient
+from src.prompts.prompt_v2 import GPTOSSClient
 
 
 def test_clinical_ai_assistant():

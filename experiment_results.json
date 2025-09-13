@@ -1,0 +1,55 @@
+{
+    "temperature_experiment": {
+        "0.3": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": ""
+        },
+        "0.7": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": ""
+        },
+        "1.0": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": "**Possible diagnoses (consider clinical context &"
+        }
+    },
+    "max_tokens_experiment": {
+        "50": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": ""
+        },
+        "100": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": "**Possible diagnoses (in no particular order):**\n\n1. **COVID\u201119 infection** \u2013 fever, cough, SOB common; check PCR/antigen test.  \n2. **Influenza** \u2013 similar tri"
+        },
+        "200": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": "**Possible diagnoses (differential)**  \n1. **COVID\u201119** \u2013 fever, cough, and shortness of breath are classic.  \n2. **Influenza** \u2013 similar triad; consider if in flu season.  \n3. **Community\u2011acquired pneumonia** \u2013 especially in a 45\u2011year\u2011old with cough and dyspnea.  \n4. **Acute bronchitis** \u2013 viral or early bacterial infection.  \n5. **Exacerbation of hypertension\u2011related pulmonary edema** \u2013 less"
+        }
+    },
+    "template_experiment": {
+        "BASIC_DIAGNOSIS": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": "**Possible diagnoses (differential):**\n\n1. **COVID\u201119** \u2013 fever, cough, dyspnea common; test for SARS\u2011CoV\u20112.  \n2. **Community\u2011acquired bacterial pneumonia** \u2013 fever, productive cough, shortness of breath; chest X\u2011ray, CBC, cultures.  \n3. **Influenza** \u2013 fever, cough, dyspnea; rapid influenza test or PCR.  \n4. **Acute bronchitis** \u2013 cough with fever, usually viral; treat symptomatically.  \n5. **Acute exacerbation of heart failure** \u2013 shortness of breath, cough, fever (possible infection trigger); check BNP, echo, chest X\u2011ray.  \n6. **Pulmonary embolism** \u2013 dyspnea, cough, fever in a hypertensive male; consider DVT/PE work\u2011up if risk factors.  \n7. **Lung abscess or aspiration pneumonia** \u2013 if productive cough with foul sputum, consider CT.  \n\n**Next steps:**  \n- COVID\u201119 & influenza testing.  \n- Chest imaging (CXR/CT) and labs (CBC, CRP/ESR, BNP).  \n- Review medication (lisinopril) for ACE\u2011I\u2013related cough.  \n- Monitor oxygen saturation; consider supplemental O\u2082 if SpO\u2082\u202f<\u202f94%."
+        },
+        "DIFFERENTIAL_DIAGNOSIS": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": "**Differential diagnosis for a 45\u2011year\u2011old male with fever, cough, shortness of breath, and a history of hypertension (on lisinopril):**\n\n| Category | Possible Condition | Why it fits | Key points / next steps |\n|----------|--------------------|-------------|-------------------------|\n| **Infectious respiratory** | \u2022 **COVID\u201119 (SARS\u2011CoV\u20112)**<br>\u2022 **Influenza (flu)**<br>\u2022 **Community\u2011acquired pneumonia (CAP)** (bacterial or viral) | \u2022 Fever, cough, dyspnea are classic. <br>\u2022 Current pandemic/seasonal prevalence. | Rapid antigen or PCR testing; chest X\u2011ray or CT if severe. |\n| **Bacterial pneumonia** | \u2022 *Streptococcus pneumoniae*, *Haemophilus influenzae* | \u2022 Fever + productive cough + SOB; hypertension can predispose to complications. | Chest X\u2011ray, CBC, CRP/ESR; consider empiric antibiotics if imaging confirms. |\n| **Viral bronchitis / upper\u2011respiratory infection** | \u2022 RSV, adenovirus, parainfluenza | \u2022 Can cause cough, fever, mild SOB. | Usually self\u2011limited; supportive care. |\n| **Pulmonary embolism (PE)** | \u2022 PE secondary to DVT | \u2022 SOB, pleuritic chest pain, tachypnea; hypertension raises risk. | D\u2011Dimer, CT pulmonary angiography if suspicion high. |\n| **Heart\u2011related** | \u2022 Acute coronary syndrome (unstable angina / NSTEMI) <br>\u2022 Heart failure decompensation (acute pulmonary edema) | \u2022 Hypertension is a major risk factor; SOB & cough can be cardiac. | ECG, troponin, BNP/NT\u2011proBNP, bedside echo. |\n| **Asthma or COPD exacerbation** | \u2022 Exacerbated COPD (if history) or new asthma | \u2022 SOB, cough, wheeze; hypertension can coexist. | Peak flow, spirometry, bronchodilator response. |\n| **Interstitial lung disease** | \u2022 Idiopathic pulmonary fibrosis or drug\u2011induced (unlikely acute but possible) | \u2022 SOB, dry cough; hypertension may be incidental. | High\u2011resolution CT if chronic pattern suspected. |\n| **Other respiratory infections** | \u2022 Mycoplasma pneumoniae, Chlamydophila pneumoniae | \u2022 Fever, atypical cough, SOB. | Consider serology or PCR if typical bacterial CAP excluded. |\n| **Medication\u2011related** | \u2022 ACE\u2011inhibitor (lisinopril) cough (usually dry, non\u2011productive) | \u2022 Chronic cough in the last weeks, may coexist with infection. | Discontinue if cough severe; check for angioedema. |\n\n**Key take\u2011away**\n\n- Fever, cough, and SOB in a hypertensive adult can represent a spectrum from a simple viral infection to life\u2011threatening cardiopulmonary emergencies.  \n- **Urgent evaluation** is warranted if there is chest pain, severe dyspnea, hypoxia, hypotension, or signs of shock.  \n- Initial work\u2011up: vital signs, pulse oximetry, ECG, CBC, basic metabolic panel, BNP, chest imaging (X\u2011ray or CT), and rapid viral testing.  \n- The above list is not exhaustive but covers the most common and clinically significant possibilities.  \n\nIf symptoms worsen or you notice chest pain, sudden worsening breathlessness, fainting, or confusion, seek emergency care immediately."
+        },
+        "EMERGENCY_TRIAGE": {
+            "Input symptoms": "fever, cough, shortness of breath",
+            "Recommended Diagnosis": "**This combination of symptoms (fever + cough + shortness of breath) in a 45\u2011year\u2011old male with hypertension is potentially serious.**  \nIt could represent a respiratory infection (e.g., COVID\u201119, bacterial pneumonia), acute heart failure, pulmonary embolism, or another urgent condition. **Prompt evaluation is essential.**\n\n---\n\n### 1. Immediate Actions (Emergency Priority)\n\n| Symptom / Red Flag | Why it matters | What to do right now |\n|--------------------|----------------|----------------------|\n| **Severe or worsening shortness of breath** | Indicates possible respiratory failure, pneumothorax, pulmonary embolism, or acute heart failure. | **Call emergency services (911 in the U.S.)**. Tell them you have fever, cough, SOB, and hypertension. |\n| **Chest pain or pressure, especially if radiating to arm, jaw, or back** | Could be a heart attack or pulmonary embolism. | **Call emergency services** immediately. |\n| **Sudden severe cough with blood (hemoptysis)** | Possible severe infection, airway bleeding, or pulmonary embolism. | **Call emergency services**. |\n| **Sudden confusion, dizziness, or fainting** | Could signal low oxygen or blood pressure issues. | **Call emergency services**. |\n| **Fever > 38.5\u202f\u00b0C (101.3\u202f\u00b0F) and worsening symptoms** | Raises risk of severe infection or sepsis. | **Call emergency services**. |\n\n> **If any of the above red flags are present, do not wait\u2014call 911 or your local emergency number right away.**\n\n---\n\n### 2. If No Immediate Red Flags (but still concerning)\n\n1. **Call your primary care provider (PCP) or urgent\u2011care clinic within the next 24\u202fhours.**  \n2. **Self\u2011monitor:**  \n   - **Temperature:** take every 4\u20136\u202fhours.  \n   - **Respiratory rate:** count breaths per minute (normal: 12\u201320).  \n   - **Oxygen saturation:** if you have a pulse oximeter, keep reading >\u202f94\u202f%.  \n   - **Blood pressure:** if you have a cuff, keep it <\u202f140/90\u202fmm\u202fHg (but don\u2019t panic if it\u2019s a bit higher\u2014just note it).  \n3. **Avoid activities that worsen breathing.** Sit upright or in a recliner; avoid lying flat.  \n4. **Stay hydrated** (water, clear broths).  \n5. **Do not take additional medications without consulting your doctor.**  \n6. **If you are on lisinopril and develop a persistent dry cough**, it might be an ACE\u2011inhibitor side effect. Tell your PCP.\n\n---\n\n### 3. Things to Communicate to Your Healthcare Provider\n\n- Fever (exact temperature and duration).  \n- Cough (dry or productive, onset, frequency).  \n- Shortness of breath (on exertion, at rest, any patterns).  \n- Any chest pain, palpitations, or dizziness.  \n- Any recent travel, sick contacts, or exposure to COVID\u201119.  \n- Current medications (lisino\u00adpril, and any OTC or supplements).  \n- Any known allergies or past adverse reactions.  \n- Any recent changes in hypertension control or blood pressure readings.\n\n---\n\n### 4. Why Hypertension & Lisinopril Matter\n\n- **Hypertension** can mask or worsen symptoms of heart failure or pulmonary edema.  \n- **Lisinopril** (an ACE inhibitor) can cause a dry cough and, rarely, angioedema (swelling of lips, tongue, or throat). If you notice swelling or difficulty breathing that wasn\u2019t there before, this is an emergency\u2014call 911.\n\n---\n\n### 5. Bottom Line\n\n- **Shortness of breath + fever + cough = high priority.**  \n- **If any red flag appears, call emergency services immediately.**  \n- **If no red flag but still symptomatic, seek medical care within 24\u202fhours and monitor closely.**\n\n---\n\n**Do you have any of the red\u2011flag symptoms"
+        },
+        "TREATMENT_PLAN": {
+            "error": "429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions"
+        }
+    },
+    "structured_vs_unstructured": {
+        "structured": {
+            "error": "429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions"
+        },
+        "unstructured": {
+            "error": "429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions"
+        }
+    }
+}
