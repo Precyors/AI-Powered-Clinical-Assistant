@@ -101,7 +101,6 @@ transformers_cache/
 chroma/
 *.faiss
 *.hnsw
-*.sqlite
 
 
 # Checkpoints / Training outputs
