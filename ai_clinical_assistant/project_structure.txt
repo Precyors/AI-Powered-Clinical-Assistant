@@ -1,0 +1,29 @@
+clinical-assistant/
+├─ data/
+│  ├─ raw/
+│  └─ clean/
+├─ src/
+│  ├─ ingest/
+│  │  ├─ data_cleaning.py
+│  │  └─ ingest.py
+│  ├─ embeddings/
+│  │  └─ vectorstore.py
+│  ├─ rag/
+│  │  └─ rag_service.py
+│  ├─ api/
+│  │  └─ main.py
+│  ├─ db/
+│  │  └─ models.py
+│  ├─ safety/
+│  │  └─ filters.py
+│  ├─ ui/
+│  │  └─ streamlit_app.py
+│  └─ config.py
+├─ tests/
+│  ├─ test_data_cleaning.py
+│  ├─ test_vectorstore.py
+│  ├─ test_rag.py
+│  └─ test_api.py
+├─ .env
+├─ pyproject.toml / poetry.lock
+└─ README.md

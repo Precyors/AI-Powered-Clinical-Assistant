@@ -1,0 +1,109 @@
+TIMESTAMP: 1758088094.4505622
+
+
+----
+
+TIMESTAMP: 1758094142.3248162
+{
+  "symptoms": "spinning sensation when turning head, nausea, brief episodes of dizziness",
+  "reasoning": "The patient's description of a spinning sensation triggered by head movement, accompanied by nausea and brief dizziness episodes, aligns closely with the classic presentation of benign paroxysmal positional vertigo (BPPV). The candidate reference lists these exact symptoms (spinning_movements, nausea, brief dizziness) and notes that BPPV is provoked by changes in head position.",
+  "diagnosis": "(vertigo) paroymsal positional vertigo",
+  "treatment_suggestions": [
+    "Perform the Epley maneuver or other canalith repositioning procedures under professional guidance",
+    "Lie down and avoid sudden head movements until symptoms improve",
+    "Consult an ENT or neurologist for vestibular assessment",
+    "Engage in vestibular rehabilitation exercises as
+
+----
+
+TIMESTAMP: 1758094599.0395317
+{
+  "symptoms": "spinning sensation when turning head, nausea, brief episodes of dizziness",
+  "reasoning": "The patient's description of a spinning sensation triggered by head movement, accompanied by nausea and brief episodes of dizziness, aligns closely with the classic presentation of benign paroxysmal positional vertigo (BPPV). BPPV is characterized by brief episodes of vertigo provoked by changes in head position, often with associated nausea and vomiting. The other candidate, migraine, typically includes headache, visual disturbances, and longer lasting pain, which are not reported here.",
+  "diagnosis": "Benign Paroxysmal Positional Vertigo (BPPV)",
+  "treatment_suggestions": [
+    "Lie down and rest during an episode",
+    "Avoid sudden changes in body position",
+    "Avoid abrupt head movements",
+    "Relax and stay calm",
+    "Consider performing the Epley maneuver under professional guidance"
+  ],
+  "confidence": 0.92,
+
+----
+
+TIMESTAMP: 1758095514.5892127
+{"symptoms":"spinning sensation when turning head, nausea, brief episodes of dizziness","reasoning":"The brief positional dizziness with nausea and spinning matches benign paroxysmal positional vertigo.","diagnosis":"Benign Paroxysmal Positional Vertigo (BPPV)","treatment_suggestions":["Perform
+
+----
+
+TIMESTAMP: 1758183002.8759913
+We need to output JSON with fields: symptoms (string), reasoning (1-2 sentence), diagnosis (string), treatment_suggestions (array of strings), confidence (float), references (array of objects with disease, score, evidence).
+
+We have two candidate diseases: BPPV (paroxysmal positional vertigo) score 0.7277, symptoms include spinning_movements, nausea, brief episodes of dizziness (spinning sensation when turn head). Migraine also includes nausea, headache, etc but not specifically spinning when turning head. So BPPV is best.
+
+We need to fill fields.
+
+Symptoms string: maybe list of patient symptoms: "spinning sensation when turning head, nausea, brief episodes of dizziness". Reasoning: "Symptoms of positional vertigo triggered by head movement match BPPV". Diagnosis: "Benign paroxysmal positional vertigo". Treatment suggestions: typical: "Perform Epley maneuver", "Avoid sudden head movements and lie down until symptoms resolve". Could also include "Consult ENT/neurology". Provide two suggestions.
+
+Confidence: maybe 0.85 (since candidate score 0.7277 but we are confident). Use 0.85.
+
+References: include the candidate disease with score and evidence. Evidence string: maybe list of matching symptoms: "spinning_movements, nausea, brief episodes of dizziness". Use disease name as in candidate: "(vertigo) paroymsal positional vertigo". But maybe better to match exactly "vertigo) paroymsal positional vertigo"? The candidate shows "Disease: (vertigo) paroymsal positional vertigo". Use that string.
+
+Score: 0.7277.
+
+Evidence: "spinning sensation when turning head, nausea, brief episodes of dizziness". Provide as string.
+
+Now produce JSON exactly.
+
+Check JSON format: double quotes, no trailing commas.
+
+Let's craft:
+
+{
+  "symptoms":"spinning sensation when I turn my head, nausea, brief episodes of dizziness",
+  "reasoning":"The dizziness is triggered by head movement and includes nausea, which is characteristic of benign paroxysmal positional vertigo.",
+  "diagnosis":"Benign paroxysmal positional vertigo",
+  "treatment_suggestions":["Perform the Epley repositioning maneuver","Avoid sudden head movements and lie down until symptoms subside"],
+  "confidence":0.85,
+  "references":[{"disease":"(vertigo) par
+
+----
+
+TIMESTAMP: 1758266024.423432
+
+
+----
+
+TIMESTAMP: 1758267267.4824429
+
+
+----
+
+TIMESTAMP: 1758267412.5133822
+
+
+----
+
+TIMESTAMP: 1758272678.1679552
+TIMESTAMP: 1758272915.4357972
+TIMESTAMP: 1758274821.8703196
+
+
+----
+
+TIMESTAMP: 1758274916.4183662
+
+
+----
+
+TIMESTAMP: 1758275000.6713846
+
+
+----
+
+TIMESTAMP: 1758275168.2924223
+
+
+----
+
